@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>DATA VIZ NARATIVE PROJECT</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>		
+  <main>
+    <div class="header">
+      <h1 style="text-align:center">World Happiness Index</h1>
+      <div style="text-align:center; width: 50%; position: relative; left: 25%;">
+        Welcome to the visualization of the world happiness report.
+        The data is published yearly by <a href="https://worldhappiness.report/">the world happiness report</a>.
+        Below is the graph of the top fifty happiest countries according to the report.
+        You can use the left and right buttons to view to the top fifty countries for each metric used.
+        Each slide has further descriptions of each metric.
+        The data was collected from <a href="https://www.kaggle.com/datasets/mathurinache/world-happiness-report?select=2022.csv">kaggle</a>.
+      </div>
+    </div>
+
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div id="chart"></div>
+        <div id="chart-text"></div>
+        <div id="detail"></div>
+      </div>
+      <div class="slidecontainer">
+        Year
+        <input type="range" min="2015" max="2022" value="2022" class="slider" id="myRange">
+        <div id="range-text">2022</div>
+      </div>
+    </div>
+    <br>
+
+    <a class="prev" onclick="prevSlide()">&#10094;</a>
+    <a class="next" onclick="nextSlide()">&#10095;</a>
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide('Happiness-Score')"></span>
+      <span class="dot" onclick="currentSlide('GDP')"></span>
+      <span class="dot" onclick="currentSlide('Social-Support')"></span>
+      <span class="dot" onclick="currentSlide('Healthy-Life-Expectancy')"></span>
+      <span class="dot" onclick="currentSlide('Freedom')"></span>
+      <span class="dot" onclick="currentSlide('Trust')"></span>
+      <span class="dot" onclick="currentSlide('Generosity')"></span>
+      <span class="dot" onclick="currentSlide('Dystopia')"></span>
+    </div>
+  </main>				
+</body>
+
+  <script src="https://d3js.org/d3.v7.js"></script>
+  <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+</html>
